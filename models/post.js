@@ -16,4 +16,7 @@ module.exports = {
             posts[index] = updatedPost;
         }
     },
-}
+    deletePost(id) {
+        posts = posts.filter(post => post.id !== id);
+    }
+};
