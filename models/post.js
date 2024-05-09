@@ -9,5 +9,11 @@ module.exports = {
     },
     createPost(post) {
         posts.push(post);
-    }
+    }, 
+    updatePost(id, udatedPost) {
+        const index = posts.findIndex(post => post.id === id);
+        if (index !== -1) {
+            posts[index] = updatedPost;
+        }
+    },
 }
