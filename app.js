@@ -1,19 +1,16 @@
+// Import required modules
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000; // Choose any port you like
 
-//Set uo middleware 
-app.use(express.static('public'));
+// Set up middleware to parse JSON bodies
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//Routes
-app.get('/', (reg, res) => {
-    res.sendFile(__dirname + '/views/index.html');
-})
+// Set up static files directory (for CSS, JS, etc.)
+app.use(express.static('public'));
 
-// Start Server 
+// Start server
 app.listen(PORT, () => {
-    console.log(`Server is running on https://localhost:${PORT}`);
+console.log(`Server is running on http://localhost:${PORT}`);
 });
-
