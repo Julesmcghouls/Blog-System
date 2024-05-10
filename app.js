@@ -14,3 +14,12 @@ app.use(express.static('public'));
 app.listen(PORT, () => {
 console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+const LocalStorage = require('node-localstorage').LocalStorage;
+const localStorage = new LocalStorage('./localStorage');
+
+const blogController = require('./blogController');
+
+// Mount the blog controller routes
+app.use('/api', blogController);
+

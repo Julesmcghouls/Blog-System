@@ -1,6 +1,7 @@
+// blogController.js
 const express = require('express');
 const router = express.Router();
-const posts = require('../models/posts');
+const posts = require('./posts');
 
 // Get all blog posts
 router.get('/posts', (req, res) => {

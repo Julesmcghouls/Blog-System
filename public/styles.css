@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#blog-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#blog-list li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+#blog-list li:last-child {
+    border-bottom: none;
+}
